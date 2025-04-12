@@ -1,0 +1,233 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:Serif;
+}
+:root{
+    --color:#FFC107;
+}
+.container{
+    height: 100vh;
+    background-image: url(assets/images/39587114-library-wallpapers.jpg);
+    width: 100%;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 20px 0px;
+    position: relative;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-links a:hover{
+    color: var(--color);
+}
+.login , .sign{
+  background-color: red;  
+  padding: 4px 40px;
+  border-radius: 15px;
+}
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: black;
+    width: 200px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-link:hover {
+    background-color: red;
+}
+.cards{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+.cards h2{
+    margin-bottom: 30px;
+}
+.block{
+    background-color: black;
+    padding: 10px 0px;
+    color: white;
+    width: 30%;
+    font-weight: bold;
+    /* min-width: 400px; */
+}
+.card{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.card img{
+    width: 150px;
+    height: 200px;
+    margin-bottom: 40px;
+}
+/* login style */
+.loginContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.login-box{
+    width: 350px;
+    background-color: black;
+    color: white;
+    padding: 4rem;
+    border-radius: 5px;
+}
+.login-box h2{
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+}
+.login-box input{
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 7px 0px;
+}
+.login-box button{
+    width: 100%;
+    border-radius: 15px;
+    padding: 2px 0px;
+    background-color: #C80306;
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.login-box button:hover{
+    background-color: var(--color);
+    color: black;
+    cursor: pointer;
+}
+.login-box a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.658);
+}
+.login-box a:hover{
+    color:var(--color) ;
+
+}
+
+.login-box label{
+    font-size: 20px;
+}
+@media (max-width:600px) {
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;}
+.container{
+    height: 100%;
+    width: 100%;}
+    .block{
+        width: 50%;}
+    .cards {
+        flex-direction: column; 
+        /* flex-wrap: wrap; */
+        height: auto;
+        padding: 20px 0px; }
+    .block{
+        width: 90%;
+        margin-bottom: 20px;}
+    .card{
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;}
+    .card img{
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px; }}
+@media (max-width:1024px) {
+.container{
+    height: 100%;
+    width: 100%;}
+    .cards{
+        flex-direction: column; 
+        height: auto;
+        padding: 20px 0px;}
+    .block{
+        width: 60%;
+        margin-bottom: 20px;}
+    .card{
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;}
+    .card img{
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px; }
+}
+@media (max-width:800px) {
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;}
+.container{
+    height: 100%;
+    width: 100%;}
+    .cards{
+        flex-direction: column; 
+        height: auto;
+        padding: 20px 0px;}
+    .block{
+        width: 60%;
+        margin-bottom: 20px;}
+    .card{
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;}
+    .card img{
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px; }
+}
+@media (max-width:1024px) {
+.container{
+    height: 100%;
+    width: 100%;}
+}
